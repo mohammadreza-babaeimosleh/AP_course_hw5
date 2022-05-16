@@ -11,7 +11,9 @@ int main(int argc, char **argv)
     if (true) // make false to run unit-tests
     {
         Sugar s{5};
-        
+        std::cout << "\e[31m" << "Hello" << "\e[0m" << World" << std::endl;
+        return 0;
+                
     }
     else
     {
