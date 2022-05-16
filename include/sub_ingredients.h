@@ -2,15 +2,17 @@
 #define SUB_INGREDIENTS_H
 #include "ingredient.h"
 #include <iostream>
+#include <string>
+#include <typeinfo>
 
 #define DEFCLASS(subclass_name, ppu)\
-class subclass_name : protected Ingredient\
+class subclass_name : public Ingredient\
 {\
 public:\
     subclass_name(size_t units) : Ingredient{ppu, units}\
     {\
-        this->name = "subclass_name";\
-        std::cout << "hello" << std::endl;\
+        this->name = #subclass_name;\
+        std::cout << this->name << std::endl;\
     };\
     virtual std::string get_name() {return this->name;}\
 };                              

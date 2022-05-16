@@ -15,7 +15,11 @@ public:
     
 
 protected:
-    Ingredient(double price_unit, size_t units);
+    Ingredient(double price_unit, size_t units)
+    {
+        this->price_unit = price_unit;
+        this->units = units;
+    }
 
     double price_unit;
     size_t units;
