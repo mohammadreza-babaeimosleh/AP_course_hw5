@@ -1,8 +1,8 @@
 #include "espresso_based.h" 
 
 EspressoBased::EspressoBased()
-:name{""}
-,ingredients{}
+    :name{""}
+    ,ingredients{}
 {
 };
 
@@ -33,11 +33,14 @@ EspressoBased::~EspressoBased()
 }
 
 
-
-
-// EspressoBased::~EspressoBased()
+// EspressoBased::brew()
 // {
-//     for(const auto& i : ingredients)
-//         delete i;
-//     ingredients.clear();
+
 // }
+
+
+ std::vector<Ingredient*>& EspressoBased::get_ingredients()
+ {
+     return ingredients;
+ }
+

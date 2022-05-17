@@ -2,7 +2,7 @@
 #define ESPRESSO_BASED_H
 #include<vector>
 #include<string>
-#include "ingredient.h"
+#include"sub_ingredients.h"
 
 class EspressoBased
 {
@@ -13,7 +13,7 @@ public:
     void brew();
     std::vector<Ingredient*>& get_ingredients();
 
-    ~EspressoBased();
+    virtual ~EspressoBased();
 
 protected:
     EspressoBased();

@@ -68,7 +68,7 @@ TEST(HW5Test, TEST6) {
     delete esp;
     EXPECT_EQ(sides.size(), 0);
 }
-
+*/
 TEST(HW5Test, TEST7) {
     Cappuccino cappuccino;
     cappuccino.add_side_item(new Chocolate{2});
@@ -76,7 +76,7 @@ TEST(HW5Test, TEST7) {
     EXPECT_EQ(copy.get_name(), "Cappuccino");
     EXPECT_DOUBLE_EQ(copy.price(), 65);
 }
-
+/*
 TEST(HW5Test, TEST8) {
     Cappuccino cappuccino;
     cappuccino.add_side_item(new Water{1});
