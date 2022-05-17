@@ -11,9 +11,6 @@ public:\
     subclass_name(size_t units) : Ingredient{ppu, units}\
     {\
         this->name = #subclass_name;\
-        std::cout << this->name << std::endl;\
-        std::cout << "ppu =" << ppu << std::endl;\
-        std::cout << "unit =" << units  << std::endl;\
     };\
     virtual std::string get_name() {return this->name;}\
 };                              

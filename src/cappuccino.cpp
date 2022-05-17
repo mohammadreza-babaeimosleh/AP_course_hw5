@@ -16,9 +16,44 @@ Cappuccino::Cappuccino()
 
 
 Cappuccino::Cappuccino(const Cappuccino& cap)
-    :side_items{cap.side_items}
+    :EspressoBased{cap}
 {
-    ingredients = cap.ingredients;
+    for (Ingredient* component : cap.side_items)
+    {
+        if(component->get_name() == "Cinnamon")
+        {
+            side_items.push_back(new Cinnamon{component->get_units()});
+        }
+        else if(component->get_name() == "Chocolate")
+        {
+            side_items.push_back(new Chocolate{component->get_units()});
+        }
+        else if(component->get_name() == "Sugar")
+        {
+            side_items.push_back(new Sugar{component->get_units()});
+        }
+        else if(component->get_name() == "Cookie")
+        {
+            side_items.push_back(new Cookie{component->get_units()});
+        }
+        else if(component->get_name() == "Espresso")
+        {
+            side_items.push_back(new Espresso{component->get_units()});
+        }
+        else if(component->get_name() == "Milk")
+        {
+            side_items.push_back(new Milk{component->get_units()});
+        }
+        else if(component->get_name() == "MilkFoam")
+        {
+            side_items.push_back(new MilkFoam{component->get_units()});
+        }
+        else if(component->get_name() == "Water")
+        {
+            side_items.push_back(new Water{component->get_units()});
+        }
+
+    }
 };
 
 
@@ -28,8 +63,45 @@ void Cappuccino::operator=(const Cappuccino& cap)
     {
         return;
     }
-    side_items = cap.side_items;
-    ingredients = cap.ingredients;
+
+    side_items.clear();
+
+    for (Ingredient* component : cap.side_items)
+    {
+        if(component->get_name() == "Cinnamon")
+        {
+            side_items.push_back(new Cinnamon{component->get_units()});
+        }
+        else if(component->get_name() == "Chocolate")
+        {
+            side_items.push_back(new Chocolate{component->get_units()});
+        }
+        else if(component->get_name() == "Sugar")
+        {
+            side_items.push_back(new Sugar{component->get_units()});
+        }
+        else if(component->get_name() == "Cookie")
+        {
+            side_items.push_back(new Cookie{component->get_units()});
+        }
+        else if(component->get_name() == "Espresso")
+        {
+            side_items.push_back(new Espresso{component->get_units()});
+        }
+        else if(component->get_name() == "Milk")
+        {
+            side_items.push_back(new Milk{component->get_units()});
+        }
+        else if(component->get_name() == "MilkFoam")
+        {
+            side_items.push_back(new MilkFoam{component->get_units()});
+        }
+        else if(component->get_name() == "Water")
+        {
+            side_items.push_back(new Water{component->get_units()});
+        }
+
+    }
 };
 
 
