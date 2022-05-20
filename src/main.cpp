@@ -5,14 +5,17 @@
 #include "espresso_based.h"
 #include "cappuccino.h"
 #include "mocha.h"
+#include <ftxui/dom/elements.hpp>
+#include <ftxui/screen/screen.hpp>
+#include <ftxui/dom/elements.hpp>
+#include <iostream>
 
 int main(int argc, char **argv)
 {
-    if (false) // make false to run unit-tests
+    if (true) // make false to run unit-tests
     {
-        Sugar s{5};
-        
-        
+        Cappuccino cappuccino{};
+        cappuccino.brew();       
     }
     else
     {

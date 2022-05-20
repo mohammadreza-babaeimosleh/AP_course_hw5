@@ -3,6 +3,12 @@
 #include<vector>
 #include<string>
 #include"sub_ingredients.h"
+#include <ftxui/dom/elements.hpp>
+#include <ftxui/screen/screen.hpp>
+#include "ftxui/dom/node.hpp"      // for Render
+#include "ftxui/screen/color.hpp"  // for ftxui
+#include <iostream>
+#include <thread>
 
 class EspressoBased
 {

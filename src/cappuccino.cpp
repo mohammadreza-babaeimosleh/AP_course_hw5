@@ -8,8 +8,8 @@ Cappuccino::Cappuccino()
     Milk* milk{new Milk{2}};
     Espresso* espresso{new Espresso{2}};
     MilkFoam* milkfoam{new MilkFoam{1}};
-    ingredients.push_back(milk);
     ingredients.push_back(espresso);
+    ingredients.push_back(milk);
     ingredients.push_back(milkfoam);
     name = "Cappuccino";
 };
