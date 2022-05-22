@@ -21,16 +21,7 @@ RUN git clone --depth=1 -b main https://github.com/google/googletest.git
 WORKDIR /usr/src/libraries/googletest/build
 RUN cmake .. \
     && make \
-    && make install
+     && make install
 
-# build the project
-WORKDIR /usr/src/app
-COPY . .
-RUN rm -rf build
-RUN mkdir build
-WORKDIR /usr/src/app/build
-RUN cmake ..
-RUN make
 
-# CMD ["/usr/sbin/sshd","-D"]
-CMD ["./main"]
+
