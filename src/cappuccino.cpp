@@ -5,9 +5,10 @@ Cappuccino::Cappuccino()
     : EspressoBased{}
     , side_items{}
 {
-    Milk* milk{new Milk{2}};
-    Espresso* espresso{new Espresso{2}};
-    MilkFoam* milkfoam{new MilkFoam{1}};
+    // adding material's
+    Milk* milk{ new Milk{ 2 } };
+    Espresso* espresso{ new Espresso{ 2 } };
+    MilkFoam* milkfoam{ new MilkFoam{ 1 } };
     ingredients.push_back(espresso);
     ingredients.push_back(milk);
     ingredients.push_back(milkfoam);
@@ -16,41 +17,41 @@ Cappuccino::Cappuccino()
 
 
 Cappuccino::Cappuccino(const Cappuccino& cap)
-    :EspressoBased{cap}
+    :EspressoBased{ cap }
 {
     for (Ingredient* component : cap.side_items)
     {
         if(component->get_name() == "Cinnamon")
         {
-            side_items.push_back(new Cinnamon{component->get_units()});
+            side_items.push_back(new Cinnamon{ component->get_units() });
         }
         else if(component->get_name() == "Chocolate")
         {
-            side_items.push_back(new Chocolate{component->get_units()});
+            side_items.push_back(new Chocolate{ component->get_units() });
         }
         else if(component->get_name() == "Sugar")
         {
-            side_items.push_back(new Sugar{component->get_units()});
+            side_items.push_back(new Sugar{ component->get_units() });
         }
         else if(component->get_name() == "Cookie")
         {
-            side_items.push_back(new Cookie{component->get_units()});
+            side_items.push_back(new Cookie{ component->get_units() });
         }
         else if(component->get_name() == "Espresso")
         {
-            side_items.push_back(new Espresso{component->get_units()});
+            side_items.push_back(new Espresso{ component->get_units() });
         }
         else if(component->get_name() == "Milk")
         {
-            side_items.push_back(new Milk{component->get_units()});
+            side_items.push_back(new Milk{ component->get_units() });
         }
         else if(component->get_name() == "MilkFoam")
         {
-            side_items.push_back(new MilkFoam{component->get_units()});
+            side_items.push_back(new MilkFoam{ component->get_units() });
         }
         else if(component->get_name() == "Water")
         {
-            side_items.push_back(new Water{component->get_units()});
+            side_items.push_back(new Water{ component->get_units() });
         }
 
     }

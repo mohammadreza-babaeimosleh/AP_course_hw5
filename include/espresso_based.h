@@ -13,8 +13,8 @@
 class EspressoBased
 {
 public:
-    virtual std::string get_name() = 0;
-    virtual double price() = 0;
+    virtual std::string get_name() = 0; //pure virtual
+    virtual double price() = 0; //pure virtual
 
     void brew();
     std::vector<Ingredient*>& get_ingredients();

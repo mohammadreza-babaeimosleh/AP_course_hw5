@@ -4,9 +4,9 @@
 class Ingredient
 {
 public:
-    double get_price_unit(){return price_unit;}
-    size_t get_units(){return units;}
-    virtual std::string get_name() = 0;
+    double get_price_unit(){ return price_unit; }
+    size_t get_units(){ return units; }
+    virtual std::string get_name() = 0; //pure virtual
 
     double price()
     {
